@@ -1,0 +1,23 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+<script>
+$scope.$on('$viewContentLoaded', function() {
+  $("#localstorageData").html("<p>hello</p>");
+  console.log('LOADED');
+});
+
+$scope.$on('$routeChangeSuccess', function () {
+  $("#localstorageData").html("<p>hello</p>");
+  console.log('routECHANGE');
+});
+
+$scope.$on('$stateChangeSuccess', function () {
+  console.log('STATECHANGE');
+});
+</script>
+<h1>this is my second page!</h1>
+<p>
+  localstorage works!
+</p>
+
+<div id="localstorageData">
+</div>
